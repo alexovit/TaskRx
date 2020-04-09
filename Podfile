@@ -8,7 +8,5 @@ target 'TaskRx' do
   # Pods for TaskRx
   pod 'RxSwift', '~> 5.0'
   pod 'RxCocoa', '~> 5.0'
-  pod 'Alamofire'
-  pod 'RxAlamofire'
 
 end

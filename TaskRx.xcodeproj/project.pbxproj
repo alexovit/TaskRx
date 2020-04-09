@@ -3,24 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2672C6D5A98AEAB8B486D8D8 /* Pods_TaskRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D59C5C32C725EEDA0FCDF3 /* Pods_TaskRx.framework */; };
+		28373129243F5E2B0048231D /* CoctailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373128243F5E2B0048231D /* CoctailService.swift */; };
+		2837312C243F5E4D0048231D /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837312B243F5E4D0048231D /* Drink.swift */; };
+		2837312E243F5EF50048231D /* RxApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837312D243F5EF50048231D /* RxApi.swift */; };
+		28373131243F66D10048231D /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28373130243F66D10048231D /* DrinkTableViewCell.swift */; };
 		28F3BFB5243F4C970055B881 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F3BFB4243F4C970055B881 /* AppDelegate.swift */; };
 		28F3BFB7243F4C970055B881 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F3BFB6243F4C970055B881 /* SceneDelegate.swift */; };
-		28F3BFB9243F4C970055B881 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F3BFB8243F4C970055B881 /* ViewController.swift */; };
+		28F3BFB9243F4C970055B881 /* CoctailsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F3BFB8243F4C970055B881 /* CoctailsListViewController.swift */; };
 		28F3BFBC243F4C970055B881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F3BFBA243F4C970055B881 /* Main.storyboard */; };
 		28F3BFBE243F4C990055B881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F3BFBD243F4C990055B881 /* Assets.xcassets */; };
 		28F3BFC1243F4C990055B881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F3BFBF243F4C990055B881 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28373128243F5E2B0048231D /* CoctailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoctailService.swift; sourceTree = "<group>"; };
+		2837312B243F5E4D0048231D /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		2837312D243F5EF50048231D /* RxApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxApi.swift; sourceTree = "<group>"; };
+		28373130243F66D10048231D /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		28F3BFB1243F4C970055B881 /* TaskRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F3BFB4243F4C970055B881 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28F3BFB6243F4C970055B881 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		28F3BFB8243F4C970055B881 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28F3BFB8243F4C970055B881 /* CoctailsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailsListViewController.swift; sourceTree = "<group>"; };
 		28F3BFBB243F4C970055B881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28F3BFBD243F4C990055B881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28F3BFC0243F4C990055B881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +50,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2837312A243F5E390048231D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2837312B243F5E4D0048231D /* Drink.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2837312F243F669A0048231D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28373130243F66D10048231D /* DrinkTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		28F3BFA8243F4C970055B881 = {
 			isa = PBXGroup;
 			children = (
@@ -63,15 +87,27 @@
 		28F3BFB3243F4C970055B881 /* TaskRx */ = {
 			isa = PBXGroup;
 			children = (
+				2837312F243F669A0048231D /* Views */,
+				2837312A243F5E390048231D /* Model */,
+				28F3BFC8243F5ABB0055B881 /* Service */,
 				28F3BFB4243F4C970055B881 /* AppDelegate.swift */,
 				28F3BFB6243F4C970055B881 /* SceneDelegate.swift */,
-				28F3BFB8243F4C970055B881 /* ViewController.swift */,
+				28F3BFB8243F4C970055B881 /* CoctailsListViewController.swift */,
 				28F3BFBA243F4C970055B881 /* Main.storyboard */,
 				28F3BFBD243F4C990055B881 /* Assets.xcassets */,
 				28F3BFBF243F4C990055B881 /* LaunchScreen.storyboard */,
 				28F3BFC2243F4C990055B881 /* Info.plist */,
 			);
 			path = TaskRx;
+			sourceTree = "<group>";
+		};
+		28F3BFC8243F5ABB0055B881 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				28373128243F5E2B0048231D /* CoctailService.swift */,
+				2837312D243F5EF50048231D /* RxApi.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		E9A26FE4738553A06E4CDC56 /* Frameworks */ = {
@@ -88,7 +124,6 @@
 				DBB08A01488AA3D530DCC8F6 /* Pods-TaskRx.debug.xcconfig */,
 				6F736E3B92CC1E530A8BE5CE /* Pods-TaskRx.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F3BFB9243F4C970055B881 /* ViewController.swift in Sources */,
+				28373131243F66D10048231D /* DrinkTableViewCell.swift in Sources */,
+				28F3BFB9243F4C970055B881 /* CoctailsListViewController.swift in Sources */,
 				28F3BFB5243F4C970055B881 /* AppDelegate.swift in Sources */,
+				2837312E243F5EF50048231D /* RxApi.swift in Sources */,
 				28F3BFB7243F4C970055B881 /* SceneDelegate.swift in Sources */,
+				2837312C243F5E4D0048231D /* Drink.swift in Sources */,
+				28373129243F5E2B0048231D /* CoctailService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
